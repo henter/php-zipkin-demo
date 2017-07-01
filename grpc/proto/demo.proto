@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package pb;
+
+service Demo {
+  rpc Hello (HelloRequest) returns (HelloReply) {}
+}
+
+message HelloRequest {
+  string q = 1;
+  int32 n = 2;
+}
+
+message HelloReply {
+  int32 code = 1;
+  string msg = 2;
+}
